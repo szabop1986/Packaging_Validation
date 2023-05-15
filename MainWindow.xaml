@@ -1,0 +1,34 @@
+﻿<Window x:Class="Box_validation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Box_validation"
+        mc:Ignorable="d"
+        Title="Box validation app" Height="390" Width="525">
+    <Grid Margin="0,0,0.4,-0.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="381*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="152" Margin="4,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="235"/>
+        <TextBox x:Name="BFZ_Serial_Package" HorizontalAlignment="Left" Height="23" Margin="101,41,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" KeyDown="BFZ_Serial_Package_KeyDown"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,43,0,0" TextWrapping="Wrap" Text="BFZ szériaszám:" VerticalAlignment="Top" RenderTransformOrigin="-0.504,-0.379" Height="16" Width="82"/>
+        <TextBox x:Name="UKL_Textbox_Package" HorizontalAlignment="Left" Height="23" Margin="101,80,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" KeyDown="UKL_Textbox_Package_KeyDown"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="UKL szériaszám:" VerticalAlignment="Top" RenderTransformOrigin="-0.504,-0.379" Height="16" Width="84"/>
+        <TextBlock HorizontalAlignment="Left" Margin="8,13,0,0" TextWrapping="Wrap" Text="Doboz cimke:" VerticalAlignment="Top" FontSize="14" Height="19" Width="84"/>
+        <Rectangle Grid.ColumnSpan="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="122" Margin="4,182,0,0" Stroke="Black" VerticalAlignment="Top" Width="235"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,187,0,0" TextWrapping="Wrap" Text="Termék cimke:" VerticalAlignment="Top" FontSize="14" Height="19" Width="88"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,238,0,0" TextWrapping="Wrap" Text="UKL szériaszám:" VerticalAlignment="Top" RenderTransformOrigin="-0.504,-0.379" Height="16" Width="84"/>
+        <TextBox x:Name="UKL_Textbox_RAU" HorizontalAlignment="Left" Height="23" Margin="102,236,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TextChanged="UKL_Textbox_RAU_TextChanged" KeyDown="UKL_Textbox_RAU_KeyDown"/>
+        <RadioButton x:Name="BFZ_Radio_button" Content="BFZ szintre csomagolok" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="133,40,0,0" VerticalAlignment="Top" Width="148" Checked="BFZ_Radio_button_Checked"/>
+        <RadioButton x:Name="UKL_radio_button" Content="UKL/NTM szintre csomagolok" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="133,62,0,0" VerticalAlignment="Top" Width="177" Checked="UKL_radio_button_Checked"/>
+        <GroupBox Grid.Column="1" Header="Csomagolási szint:&#xD;&#xA;" HorizontalAlignment="Left" Height="83" Margin="118,10,0,0" VerticalAlignment="Top" Width="216" FontSize="14"/>
+        <Rectangle x:Name="MESSAGE_TO_USER" Grid.Column="1" HorizontalAlignment="Left" Height="197" Margin="118,107,0,0" Stroke="Black" VerticalAlignment="Top" Width="252" Fill="#FFEBEBEB"/>
+        <Label x:Name="User_message_label" Content="N/A" Grid.Column="1" HorizontalAlignment="Left" Margin="184,161,0,0" VerticalAlignment="Top" Height="78" Width="116" FontSize="48"/>
+        <Label Content="V 1.3" Grid.Column="1" HorizontalAlignment="Left" Margin="341,326,0,0" VerticalAlignment="Top" FontSize="10" Height="23" Width="32"/>
+        <TextBox x:Name="SAP_Label_Textbox" HorizontalAlignment="Left" Height="23" Margin="101,120,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,122,0,0" TextWrapping="Wrap" Text="SAP cimke:" VerticalAlignment="Top" RenderTransformOrigin="-0.504,-0.379" Height="16" Width="58"/>
+
+    </Grid>
+</Window>
