@@ -12,12 +12,7 @@ namespace Box_validation
     {
         public void Create_MES_LOG(string serial)
         {
-
-            void Generate_code(int input_serial) {
-                double buffed_up_serial;
-
-            }
-
+    
             String current_time = DateTime.Now.ToString("M\\/dd\\/yyyy HH:mm:ss");
             String current_time_1 = DateTime.Now.ToString("yyyyMdd_HHmmss");
             string filename ="P_S" + serial + "_" + current_time_1;
@@ -31,7 +26,7 @@ namespace Box_validation
             create_txt.WriteLine("NPackaging_QC");
             create_txt.WriteLine("PPackaging_QC");
             create_txt.WriteLine("TP");
-            create_txt.WriteLine("0");
+            create_txt.WriteLine("O" + Environment.UserName);
             create_txt.WriteLine("[" + current_time);
             create_txt.WriteLine("]" + current_time);
             
